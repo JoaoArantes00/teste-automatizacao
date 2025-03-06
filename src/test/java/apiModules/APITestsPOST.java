@@ -12,7 +12,7 @@ public class APITestsPOST {
     @Test
     public void validarCriacaoUsuarioSucesso(){
         JSONObject request = new JSONObject();
-        request.put("name", "Yuri");
+        request.put("name", "Kaiky");
         request.put("job", "Q.A");
 
         baseURI = "https://reqres.in/api";
@@ -25,7 +25,7 @@ public class APITestsPOST {
                 post("/users").
                 then().
                 statusCode(201).
-                body("name", equalTo("Yuri")).
+                body("name", equalTo("Kaiky")).
                 body("job", equalTo("Q.A")).
                 body("id", notNullValue()).
                 body("createdAt", notNullValue()).
